@@ -1,0 +1,1 @@
+Projeto feito juntamente com a Alura junto com a Google, que dessa forma foi utilizado o Gemini para que conseguíssemos fazer uma página web com o tema a nossa escolha e utilizando os dados que criamos dentro da aula.
