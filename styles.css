@@ -1,62 +1,160 @@
+/* Corpo da página */
 body {
-    background-color: #F5F5F5; /* Lighter gray background */
-    font-family: Roboto, sans-serif; /* Modern font choice */
+    background-color: #F0F8FF; /* Tom suave de azul claro */
+    font-family: 'Roboto', sans-serif; /* Tipografia moderna */
     margin: 0;
     padding: 0;
     text-align: center;
+    color: #333; /* Cor do texto mais suave */
 }
 
+/* Botões estilizados */
 button {
-    background-color: #96CEC1; /* Light blue button */
-    color: #333333; /* Darker gray text */
-    padding: 10px 20px;
+    background-color: #56C7B6; /* Cor principal suave */
+    color: #fff; /* Texto branco */
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Borda arredondada */
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 button:hover {
-    background-color: #77B9B0; /* Slightly darker hover color */
+    background-color: #3BAA96; /* Cor mais intensa no hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
+/* Estilo de campos de entrada */
 input {
-    background-color: #F0F0F0;
-    border: 1px solid #DCDCDC;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #DCDCDC;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    width: 80%; /* Tornando-o responsivo */
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: border-color 0.3s ease;
 }
 
+input:focus {
+    border-color: #56C7B6; /* Destaque na borda ao focar */
+    outline: none; /* Remover outline padrão */
+}
+
+/* Resultados de pesquisas */
 .resultados-pesquisas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
 }
 
+/* Descrição meta estilizada */
 .descricao-meta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid #DCDCDC; /* Light gray border */
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+    border: 1px solid #E0E0E0; /* Borda sutil */
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #FFFFFF; /* Fundo branco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* Itens de resultado - Cards mais modernos */
 .item-resulado {
-    border: 1px solid #000000; /* Light gray border */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    background-color: #e8e0e0; /* White background */
-    color: #333333;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 200px;
-    height: 200px;
+    border: none; /* Removendo borda */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #333;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px; /* Cantos mais arredondados */
+    width: 240px; /* Largura mais definida */
+    height: auto; /* Altura ajustável */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Para cortar o conteúdo que ultrapassar */
+}
+
+.item-resulado:hover {
+    transform: translateY(-10px) scale(1.02); /* Elevação e leve zoom no hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao hover */
+}
+
+/* Imagem dentro do card */
+.item-resulado img {
+    width: 100%; /* Largura total do card */
+    height: 150px; /* Definindo uma altura fixa */
+    object-fit: cover; /* Para manter a proporção da imagem */
+    border-radius: 15px; /* Cantos arredondados */
+    margin-bottom: 15px; /* Espaço abaixo da imagem */
+}
+
+/* Título do card */
+.item-resulado h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Cor suave */
+    text-align: center;
+}
+
+/* Descrição curta */
+.item-resulado p {
+    font-size: 14px;
+    color: #666; /* Cor cinza mais clara */
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Botão dentro do card */
+.item-resulado button {
+    background-color: #56C7B6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o botão */
+    font-size: 14px;
+}
+
+.item-resulado button:hover {
+    background-color: #3BAA96; /* Cor mais intensa no hover */
+}
+
+/* Tags/indicadores dentro do card (se aplicável) */
+.item-resulado .tag {
+    background-color: #F0F8FF; /* Cor suave de fundo */
+    color: #56C7B6;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Estilo adicional de texto */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
 }
