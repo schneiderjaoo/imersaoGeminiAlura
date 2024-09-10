@@ -1,1 +1,3 @@
 Projeto feito juntamente com a Alura junto com a Google, que dessa forma foi utilizado o Gemini para que conseguíssemos fazer uma página web com o tema a nossa escolha e utilizando os dados que criamos dentro da aula.
+
+Para esse projeto alguns commits foram utilizdos o copilot já que o intuito seria a utilização da IA, achei uma boa ideia utilizar o copilot para algumas codificações mais em maioria para nomear os diversos commits realizados com as suas mudanças causadas.
