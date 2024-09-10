@@ -6,7 +6,7 @@ function pesquisar(){
     console.log(campoPesquisa);
 
     if(campoPesquisa === ""){
-        section.innerHTML = "A barra de pesquisa está vazia!";
+        section.innerHTML = "<p>A barra de pesquisa está vazia!</p>";
         return;
     }
 
